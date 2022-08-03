@@ -1,0 +1,120 @@
+
+
+
+<section class="create-project">
+    <!-- <app-header
+      class="header"
+      pageTitle="Novo Projeto"
+      btnTitle="cancel"
+      (clickEvent)="cancel()"
+    ></app-header> -->
+    <h2>Create New Project</h2>
+    <form>
+        <fieldset>
+          <div class="fieldset__infos">
+            <div class="info">
+              <label for="title">Title</label>
+              <input
+               
+                type="text"
+                placeholder="Project title"
+                id="title"
+                name="title"
+                required
+                minlength="3"
+              />
+              <!-- <div class="alert" [hidden]="title.valid || title.pristine">
+                Title is required and must be at least 3 characters long
+              </div> -->
+            </div>
+            <div class="info">
+              <label for="description">Description</label>
+              <textarea
+                type="text"
+                placeholder="Project description"
+                id="description"
+                name="description"
+                rows="4"
+                required
+                minlength="3"
+                maxlength="300"
+              ></textarea>
+              <!-- <div class="alert" [hidden]="description.valid || description.pristine">
+                Description is required and must be no longer than 300 characters
+              </div> -->
+            </div>
+            <div class="info">
+              <label for="date">Delivery Date</label>
+              <input
+                type="date"
+                placeholder="End Date"
+                id="date"
+                name="date"
+                required
+              />
+              <!-- <div class="alert" [hidden]="date.valid || date.pristine">
+                Delivery date is mandatory
+              </div> -->
+            </div>
+            <div class="form-message">
+              <span class="alert"
+                ><i class="alert fas fa-exclamation-triangle fa-sm"></i>required fields</span
+              >
+            </div>
+          </div>
+          <div class="fieldset__members">
+            <label for="members">Members of project</label>
+            <div class="members__search">
+              <input
+                type="search"
+                placeholder="Search for members to add"
+                id="members"
+                name="members"
+                
+                #member
+              />
+              <!-- <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+                <mat-option
+                  *ngFor="let option of filteredOptions | async"
+                  [value]="option"
+                >
+                  {{ option.name }}
+                </mat-option>
+              </mat-autocomplete> -->
+            </div>
+            <div class="members__selected">
+              <h3>Equipe</h3>
+              <!-- <div class="member" *ngIf="member.value; else empty" #memberItem>
+                <img src="https://i.pravatar.cc/300" />
+                <p>{{ member.value }}</p>
+                <span
+                  ><a (click)="remove()"><i class="fas fa-times"></i></a
+                ></span>
+              </div> -->
+            </div>
+            <label class="members__check"
+              >I am responsible for this project
+              <input type="checkbox" checked="checked" />
+              <span class="checkmark"></span>
+            </label>
+          </div>
+          <div class="fieldset__btns">
+            <div class="form-btn">
+              <button class="btn-cancel" >Cancel</button>
+              <button
+                class="btn-submit"
+                type="submit"
+               
+              >
+         
+              </button>
+            </div>
+          </div>
+        </fieldset>
+      </form>
+      
+      <ng-template #empty>
+        <p class="empty">No members added yet...</p>
+      </ng-template>
+    
+  </section>

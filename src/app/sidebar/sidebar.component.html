@@ -1,0 +1,53 @@
+<div [class.mobile]="isMobile">
+    <span (click)="close()" class="close-mobile"
+      ><i class="fas fa-times"></i
+    ></span>
+    <nav class="sidebar">
+      <div class="sidebar__nav">
+        <div class="nav__logo">
+          <!-- <app-logo></app-logo> -->
+        </div>
+        <div class="nav__menu">
+          <a [routerLink]="['/dashboard']" routerLinkActive="active-link">
+            <div><i class="fas fa-home"></i>Dashboard</div>
+          </a>
+          <a
+            [routerLink]="['/projetos']"
+            routerLinkActive="active-link"
+            class="menu__number"
+          >
+            <div><i class="fas fa-list"></i>Projects</div>
+            <span >
+              <span>5</span>
+            </span>
+          </a>
+          <a [routerLink]="['/']"><i class="fas fa-calendar"></i>Cronogram</a>
+          <a [routerLink]="['/']"><i class="fas fa-chart-line"></i>Report</a>
+          <a
+            [routerLink]="['/novo-usuario']"
+            routerLinkActive="active-link"
+            class="divider"
+            ><i class="fas fa-users"></i>Register Member</a
+          >
+          <a [routerLink]="['/']"><i class="fas fa-cog"></i>Settings</a>
+          <a [routerLink]="['/']" class="menu__number">
+            <div><i class="fas fa-bell"></i>Notifications</div>
+            <span>2</span>
+          </a>
+        </div>
+      </div>
+      <div class="sidebar__user">
+        <a [routerLink]="['/']" class="user__profile">
+          <img class="user__photo" src="https://scontent.fnbe1-2.fna.fbcdn.net/v/t1.6435-9/67685267_2470091733052089_627839951416852480_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=174925&_nc_ohc=o_mquz6EyDEAX-TCaoD&_nc_ht=scontent.fnbe1-2.fna&oh=00_AT--o-zLxH9dOwW0EbMbgpcRHA2VlirO-eaPAEImgLqSjA&oe=6304FF6E" />
+          <div class="user__name">
+            <p>Ousema siala</p>
+            <p>Project Manager</p>
+          </div>
+        </a>
+        <a [routerLink]="['/login']"><i class="fas fa-sign-out-alt"></i>Sair</a>
+      </div>
+    </nav>
+  </div>
+  <ng-template #default>
+    <span>0</span>
+  </ng-template>

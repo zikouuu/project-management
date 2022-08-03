@@ -1,0 +1,16 @@
+<div class="card">
+    <div class="card__titles">
+      <h3>{{ title }}</h3>
+      <p>{{ description }}</p>
+    </div>
+    <div class="card__tasks">
+      <p><i class="fas fa-exclamation-circle"></i>Pendant: 1 tache</p>
+      <p><i class="fas fa-check-circle"></i>Realized: 0 tache</p>
+    </div>
+    <div class="card__details">
+      <span><i class="fas fa-clock"></i>Deadline: {{ dueDate | date: 'dd/MM/yy' }}</span>
+      <a routerLink="/sprint/{{ id }}">
+        <app-btn-border btnTitle="Ver Tarefas"></app-btn-border>
+      </a>
+    </div>
+  </div>
